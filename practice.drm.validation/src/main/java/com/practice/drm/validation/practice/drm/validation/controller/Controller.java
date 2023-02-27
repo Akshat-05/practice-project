@@ -32,6 +32,7 @@ public class Controller {
         AtomicInteger countDrmKeyOnlyNull = new AtomicInteger(0);
         AtomicInteger countResourceOnlyNull = new AtomicInteger(0);
         AtomicInteger countMissMatch = new AtomicInteger(0);
+        System.out.println("size:  "  + result.size());
         LongStream.range(0, row).parallel().forEach(i -> {
             int index = (int) i;
             if (result.get(index).getDrmKeyId() == null) {
